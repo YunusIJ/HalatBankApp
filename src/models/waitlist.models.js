@@ -4,27 +4,30 @@ const waitlistSchema = new mongoose.Schema ({
 
     firstName : {
         type: String,
-        require: true
+        required: true,
     },
 
     lastName: {
         type: String,
-        require: true
+        required: true,
     },
 
     phoneNumber: {
         type: Number,
-        require: true
+        required: true,
+        unique: true,
+
     },
 
     email: {
         type: String,
-        require: true
+        required: true,
+        unique: true,
     },
 
-    businessInto: {
+    businessInfo: {
         type: String,
-        require: true
+        required: true,
     }
 },
 {

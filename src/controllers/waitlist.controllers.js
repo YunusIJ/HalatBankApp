@@ -7,7 +7,7 @@ exports.join = async  (req, res) => {
         lastName,
         email,
         phoneNumber,
-        businessInto,
+        businessInfo,
     } = req.body;
 
     try {
@@ -16,7 +16,7 @@ exports.join = async  (req, res) => {
             !lastName ||
             !email ||
             !phoneNumber ||
-            !businessInto
+            !businessInfo
 
         ) { 
             return res
@@ -32,7 +32,7 @@ exports.join = async  (req, res) => {
             lastName,
             email,
             phoneNumber,
-            businessInto
+            businessInfo
     });
 
     await newApplication.save();
